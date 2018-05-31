@@ -1,0 +1,8 @@
+- args:
+    sql: CREATE TABLE "notes"("hasura_id" integer NOT NULL, "note_title" text NOT
+      NULL, "note_body" text NOT NULL, "keywords" text , "note_id" serial NOT NULL,
+      "category" text , PRIMARY KEY ("note_id") )
+  type: run_sql
+- args:
+    name: notes
+  type: add_existing_table_or_view

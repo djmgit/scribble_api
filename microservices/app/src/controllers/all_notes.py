@@ -18,8 +18,6 @@ def add_note():
 		return jsonify(response)
 
 	hasura_id = is_loggedin(auth_token)
-	print ("haha")
-	print (hasura_id)
 	if not hasura_id:
 		response = {"status": "User is not logged in. Please login first"}
 		return jsonify(response)

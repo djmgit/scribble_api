@@ -13,13 +13,13 @@ def add_note():
 	response = ""
 
 	auth_token = request.headers.get('X-Hasura-Session-Id')
-	print (auth_token)
-	print (request.headers)
 	if not auth_token or auth_token == "":
 		response = {"status": "auth token not specified"}
 		return jsonify(response)
 
 	hasura_id = is_loggedin(auth_token)
+	print ("haha")
+	print (hasura_id)
 	if not hasura_id:
 		response = {"status": "User is not logged in. Please login first"}
 		return jsonify(response)

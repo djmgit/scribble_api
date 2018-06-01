@@ -8,7 +8,7 @@ from helpers.query_all_notes import query_all
 
 router = Blueprint('all_notes', __name__)
 
-@router.route('/all_notes', methods=['POST'])
+@router.route('/all_notes', methods=['GET'])
 def add_note():
 	response = ""
 

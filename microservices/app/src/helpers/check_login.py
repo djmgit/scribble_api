@@ -6,7 +6,7 @@ def is_loggedin(token):
 
 	headers = {
     	"Content-Type": "application/json",
-    	"Authorization": "Bearer {}".format(token)
+    	"Authorization": token
 	}
 
 	resp = requests.request("GET", url, headers=headers)

@@ -11,6 +11,7 @@ router = Blueprint('all_notes', __name__)
 @router.route('/all_notes', methods=['POST'])
 def add_note():
 	response = ""
+	print (request.headers)
 
 	auth_token = request.headers.get('X-Hasura-Session-Id')
 	if not auth_token or auth_token == "":

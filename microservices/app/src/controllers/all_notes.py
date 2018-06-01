@@ -15,6 +15,7 @@ def add_note():
 	auth_token = request.headers.get('Authorization')
 	print ("haha")
 	print (auth_token)
+	print (request.headers)
 	if not auth_token or auth_token == "":
 		response = {"status": "auth token not specified"}
 		return jsonify(response)

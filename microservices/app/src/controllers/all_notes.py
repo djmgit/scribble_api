@@ -8,14 +8,14 @@ from helpers.query_all_notes import query_all
 
 router = Blueprint('all_notes', __name__)
 
-@router.route('/all_notes', methods=['GET'])
+@router.route('/all_notes', methods=['POST'])
 def add_note():
 	response = ""
 
 	auth_token = request.headers.get('Authorization')
 	if not auth_token or auth_token == "":
 		response = {"status": "auth token not specified"}
-		auth_token = "03f2082d255ecb0ede1cc760d65601ec0cd99dc90fa3193a"
+		return jsonify(response)
 
 	hasura_id = is_loggedin(auth_token)
 	if not hasura_id:

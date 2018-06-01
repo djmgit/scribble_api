@@ -20,11 +20,3 @@ remotes:
   # Default remote to push code and configuration
 - name: '{{ cluster.name }}'      # DO NOT edit this line
   deployments:                  # DO NOT edit this line
-
-  - containers:
-    - dockerBuild:
-        contextPath: microservices/app
-        dockerfilePath: microservices/app/Dockerfile
-      name: app
-    name: app
-    nameSpace: '{{ cluster.metadata.namespaces.user }}'

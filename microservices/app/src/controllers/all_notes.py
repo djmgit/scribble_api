@@ -12,8 +12,7 @@ router = Blueprint('all_notes', __name__)
 def add_note():
 	response = ""
 
-	auth_token = request.headers.get('Authorization')
-	print ("haha")
+	auth_token = request.headers.get('X-Hasura-Session-Id')
 	print (auth_token)
 	print (request.headers)
 	if not auth_token or auth_token == "":

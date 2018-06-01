@@ -19,7 +19,7 @@ def add_note():
 		return jsonify(response)
 
 
-	auth_token = request.headers.get('Authorization')
+	auth_token = request.headers.get('X-Hasura-Session-Id')
 	if not auth_token or auth_token == "":
 		response = {"status": "auth token not specified"}
 		return jsonify(response)

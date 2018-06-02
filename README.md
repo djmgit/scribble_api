@@ -25,4 +25,21 @@ some what as follows :
 
 Apart from this the Scribble package also provides a [chrome extension](https://github.com/djmgit/scribble_web_extension)
 
+## The Scribble microservice
+
+As mentioned earlier the entire backend API is deployed as a microservice on the Hasura platform. The code for the microservice
+can be found at /microservices/app/src.
+
+### Stack used to build the microservice
+
+- Python
+- Flask
+- Python requests
+- Hasura data service
+- Hasura auth service
+- Docker for deployment
+
+The micoservice can be deployed as a separate web application. Instructions for locally running the microservice can be found
+[here](https://github.com/djmgit/scribble_api/tree/master/microservices/app)
+
 

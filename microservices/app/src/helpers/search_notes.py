@@ -3,7 +3,7 @@ import requests
 from flask import current_app as app
 
 def search_notes(hasura_id, search_data, fields):
-	url = "https://data.exemplification12.hasura-app.io/v1/query"
+	url = "https://data.accidentally14.hasura-app.io/v1/query"
 	admin_token = app.config.get("admin_token")
 
 	headers = {

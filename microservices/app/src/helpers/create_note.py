@@ -5,7 +5,7 @@ from flask import current_app as app
 def create_note(hasura_id, note_title, note_body, keywords, category):
 	admin_token = app.config.get("admin_token")
 
-	url = "https://data.exemplification12.hasura-app.io/v1/query"
+	url = "https://data.accidentally14.hasura-app.io/v1/query"
 
 	headers = {
     	"Content-Type": "application/json",

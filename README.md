@@ -55,6 +55,32 @@ The backend API provides several endpoints so that the CLI tool can communicate 
    }
    ```
    If there is no error, it returns an **ok** status message and registers the user.
+ 
+2) http://app.accidentally14.hasura-app.io/api/login : This endpoint is used to login a user. It allows only POST request.
+   It accepts a json object of the following form:
+   
+   ```
+   {
+    "username" : <username of the user>,
+    "password" : <password of the user>
+   }
+   ```
+   If there is no error, it returns an **ok** status along with a token which has to be used make all further requtests.
+   
+3) http://app.accidentally14.hasura-app.io/api/add_note : This endpoint is used to save a new note. It allows only POST
+   request. It accepts all the parameters related to the new note like its title, body etc as a json object of the
+   following form:
+   
+   ```
+   {
+    "note_title" :  <title of the note>,
+    "note_body" : <body of the note>,
+    "keywords"  : <keywords associated with the note [optional]>,
+    "category"  : <category of the note [option]>
+   }
+   ```
+   If there is no error then, it returns a **ok** status message and saves the new note in database.
+   
 
 
 

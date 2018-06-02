@@ -2,7 +2,7 @@ import json
 import requests
 
 def is_loggedin(token):
-	url = "https://auth.accidentally14.hasura-app.io/v1/user/info"
+	url = "https://auth.exemplification12.hasura-app.io/v1/user/info"
 
 	headers = {
     	"Content-Type": "application/json",

@@ -9,7 +9,7 @@ router = Blueprint('signup_user', __name__)
 @router.route('/signup', methods=['POST'])
 def signup():
 	response = ""
-	url = "https://auth.accidentally14.hasura-app.io/v1/signup"
+	url = "https://auth.exemplification12.hasura-app.io/v1/signup"
 
 	try:
 		data = request.get_json()

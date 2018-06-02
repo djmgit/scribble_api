@@ -114,5 +114,19 @@ The backend API provides several endpoints so that the CLI tool can communicate 
    If there is no error, then it returns a **ok** status message along with a list of notes which has shown successfull
    match.
    
+7) ```http://app.accidentally14.hasura-app.io/api/delete_note``` : This endpoint is used to delete an existing note
+   identified by its note_id. This endpoint only allows POST request. It takes the note_id in a json object and also
+   the Authorization token as header.
+   
+    ```
+    Authorization: Bearer <token>
+   {
+    "note_id" : <id of the note to be deleted>
+   }
+   ```
+   
+   If there is no error, then it returns a **ok** status message and deletes the required note.
+   
+   
    
    

@@ -144,6 +144,6 @@ In order to deploy the API on hasura cloud platform, follow the below given step
   git push hasura master   # hasura is the cluster alias to deploy to
   ```
   
-  For more information on deploying services on Hasura, read their [documentation]
-  (https://docs.hasura.io/0.15/manual/getting-started/index.html)
+  For more information on deploying services on Hasura, 
+  read their [documentation](https://docs.hasura.io/0.15/manual/getting-started/index.html)
   

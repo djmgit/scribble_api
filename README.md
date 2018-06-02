@@ -99,4 +99,20 @@ The backend API provides several endpoints so that the CLI tool can communicate 
    ```
    If there is no error then it returns a **ok** along with the details of the required note.
    
+6) ```http://app.accidentally14.hasura-app.io/api/note_search``` : This endpoint is used to search existing notes for given
+   word or phrase. It only allows POST request. The endpoint requires a json object containing the search phrase and a list
+   of fields to be searched. If no search field is provided then all the fields are searched for a match. It also requires
+   Authorization token as header.
+   
+   ```
+    Authorization: Bearer <token>
+   {
+    "search" : <phrase or words to be searched>,
+    "fields" : [a list of comma separated fields like: note_title, note_body, etc]
+   }
+   ```
+   If there is no error, then it returns a **ok** status message along with a list of notes which has shown successfull
+   match.
+   
+   
    

@@ -127,6 +127,23 @@ The backend API provides several endpoints so that the CLI tool can communicate 
    
    If there is no error, then it returns a **ok** status message and deletes the required note.
    
-   
-   
-   
+## How to deploy
+
+In order to deploy the API on hasura cloud platform, follow the below given steps.
+
+- Clone this repo directly or fork your own copy and clone that.
+- Enter into the project directory and open the project in terminal
+- In order to deploy the project, you need a hasura cluster. So next we need to create a free cluster. For that
+  execute ```hasura cluster create --infra free```
+- Next add this newly created cluster to your project using ```hasura cluster add <cluster_name> -c hasura```. This sets
+  an alias ```hasura``` to your cluster.
+- Finally deploy the project on the cluster you just added to the project using the following:
+  ```
+  # Commit the project files and git push to deploy
+  git add . && git commit -m "Initial commit"
+  git push hasura master   # hasura is the cluster alias to deploy to
+  ```
+  
+  For more information on deploying services on Hasura, read their [documentation]
+  (https://docs.hasura.io/0.15/manual/getting-started/index.html)
+  

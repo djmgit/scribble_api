@@ -42,4 +42,19 @@ can be found at /microservices/app/src.
 The micoservice can be deployed as a separate web application. Instructions for locally running the microservice can be found
 [here](https://github.com/djmgit/scribble_api/tree/master/microservices/app)
 
+### Endpoints
+
+The backend API provides several endpoints so that the CLI tool can communicate smoothly with it. The endpoints are described below :
+
+1) http://app.accidentally14.hasura-app.io/api/signup : This endpoint is used to register an user. It allows only POST 
+   request. It accepts a json object of the following form :
+   ```
+   {
+    "username" : <username of the user>,
+    "password" : <password of the user>
+   }
+   ```
+   If there is no error, it returns an **ok** status message and registers the user.
+
+
 

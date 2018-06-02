@@ -87,4 +87,16 @@ The backend API provides several endpoints so that the CLI tool can communicate 
    send only the Authorization token.
    If there is no error, it returns a **ok** status message and also all the note titles and their respective IDs.
    
+5) ```http://app.accidentally14.hasura-app.io/api/note_by_id``` : This is endpoint is used to view the details of a
+   particular note of a given id. The endpoint only allows POST request. One has to provide the note_id in form of a json
+   object and Authoriation token as header.
+   
+   ```
+    Authorization: Bearer <token>
+   {
+    "note_id": <id of the note>
+   }
+   ```
+   If there is no error then it returns a **ok** along with the details of the required note.
+   
    

@@ -46,7 +46,7 @@ The micoservice can be deployed as a separate web application. Instructions for 
 
 The backend API provides several endpoints so that the CLI tool can communicate smoothly with it. The endpoints are described below :
 
-1) http://app.accidentally14.hasura-app.io/api/signup : This endpoint is used to register an user. It allows only POST 
+1) ```http://app.accidentally14.hasura-app.io/api/signup``` : This endpoint is used to register an user. It allows only POST 
    request. It accepts a json object of the following form :
    ```
    {
@@ -56,7 +56,7 @@ The backend API provides several endpoints so that the CLI tool can communicate 
    ```
    If there is no error, it returns an **ok** status message and registers the user.
  
-2) http://app.accidentally14.hasura-app.io/api/login : This endpoint is used to login a user. It allows only POST request.
+2) ```http://app.accidentally14.hasura-app.io/api/login``` : This endpoint is used to login a user. It allows only POST request.
    It accepts a json object of the following form:
    
    ```
@@ -67,11 +67,12 @@ The backend API provides several endpoints so that the CLI tool can communicate 
    ```
    If there is no error, it returns an **ok** status along with a token which has to be used make all further requtests.
    
-3) http://app.accidentally14.hasura-app.io/api/add_note : This endpoint is used to save a new note. It allows only POST
+3) ```http://app.accidentally14.hasura-app.io/api/add_note``` : This endpoint is used to save a new note. It allows only POST
    request. It accepts all the parameters related to the new note like its title, body etc as a json object of the
-   following form:
+   following form. Also one has to send the auth token as a Authorization header.
    
    ```
+   Authorization: Bearer <token>
    {
     "note_title" :  <title of the note>,
     "note_body" : <body of the note>,
@@ -81,6 +82,9 @@ The backend API provides several endpoints so that the CLI tool can communicate 
    ```
    If there is no error then, it returns a **ok** status message and saves the new note in database.
    
-
-
-
+4) ```http://app.accidentally14.hasura-app.io/api/all_notes``` : This endpoint is used to view the id and tiitle of all the
+   notes present for a particular logged in user. This endpoint allows only POST request. It takes no parameters. One has to
+   send only the Authorization token.
+   If there is no error, it returns a **ok** status message and also all the note titles and their respective IDs.
+   
+   
